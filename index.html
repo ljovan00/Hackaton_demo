@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSR Portal - Submit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>CSR Portal</h1>
+            <p>Internal lab request system</p>
+        </div>
+
+        <div class="card">
+            <h2>Submit CSR Request</h2>
+
+            <label for="csrInput">CSR description</label>
+            <textarea id="csrInput" placeholder="Describe the requested change..."></textarea>
+
+            <button onclick="submitCSR()">Submit CSR</button>
+
+            <div id="confirmationLabel" class="confirmation hidden"></div>
+        </div>
+
+        <div class="nav">
+            <a href="status.html">View CSR Status</a>
+        </div>
+    </div>
+
+    <script>
+        function submitCSR() {
+            const input = document.getElementById("csrInput").value;
+
+            document.getElementById("confirmationLabel").innerText = "Submitted";
+            document.getElementById("confirmationLabel").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
