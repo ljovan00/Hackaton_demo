@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSR Portal - Submit</title>
-    <link rel="stylesheet" href="style.css">
+<title>Simple App</title>
+<style>
+.random-font {
+  font-size: calc(12px + (24 - 12) * random());
+}
+</style>
+<script>
+function applyRandomFontSize() {
+  const elements = document.querySelectorAll('body *');
+  elements.forEach(el => {
+    const randomSize = Math.floor(Math.random() * (32 - 10 + 1)) + 10;
+    el.style.fontSize = randomSize + 'px';
+  });
+}
+window.onload = applyRandomFontSize;
+</script>
 </head>
 <body>
-    <div class="app-container">
-        <div class="header">
-            <h1>CSR Portal</h1>
-            <p>Internal lab request system</p>
-        </div>
-
-        <div class="card">
-            <h2>Submit CSR Request</h2>
-
-            <label for="csrInput">CSR description</label>
-            <textarea id="csrInput" placeholder="Describe the requested change..."></textarea>
-
-            <button onclick="submitCSR()">Submit CSR</button>
-
-            <div id="confirmationLabel" class="confirmation hidden"></div>
-        </div>
-
-        <div class="nav">
-            <a href="status.html">View CSR Status</a>
-        </div>
-    </div>
-
-    <script>
-        function submitCSR() {
-            const input = document.getElementById("csrInput").value;
-
-            document.getElementById("confirmationLabel").innerText = "Submitted";
-            document.getElementById("confirmationLabel").classList.remove("hidden");
-        }
-    </script>
+<h1 class="random-font">Welcome to Simple App</h1>
+<p class="random-font">This is the index page with random font sizes.</p>
 </body>
 </html>
