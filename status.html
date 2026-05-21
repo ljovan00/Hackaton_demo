@@ -1,33 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CSR Portal - Status</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSR Status</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
-        <div class="header">
-            <h1>CSR Portal</h1>
-            <p>CSR request tracking</p>
-        </div>
-
-        <div class="card">
-            <h2>CSR-001 Status</h2>
-
-            <div class="status-box status-wrong">
-                <p><strong>Status:</strong> Waiting for review</p>
-                <p><strong>Environment:</strong> Production</p>
-                <p><strong>Priority:</strong> Low</p>
+    <header>
+        <h1>Customer Service Request Status</h1>
+    </header>
+    <main>
+        <section class="status-section">
+            <div class="status-card status-success">
+                <h2>Status: Ready for lab testing</h2>
+                <p>Your request has moved forward and is now ready for lab testing.</p>
             </div>
-
-            <p class="note">
-                This status should reflect the current lab testing workflow.
-            </p>
-        </div>
-
-        <div class="nav">
-            <a href="index.html">Back to Submit Form</a>
-        </div>
-    </div>
+        </section>
+        <nav>
+            <a href="index.html">Back to Home</a>
+        </nav>
+    </main>
 </body>
 </html>
