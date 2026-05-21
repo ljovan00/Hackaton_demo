@@ -1,39 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CSR Portal - Submit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="app-container">
-        <div class="header">
-            <h1>CSR Portal</h1>
-            <p>Internal lab request system</p>
-        </div>
-
-        <div class="card">
-            <h2>Submit CSR Request</h2>
-
-            <label for="csrInput">CSR description</label>
-            <textarea id="csrInput" placeholder="Describe the requested change..."></textarea>
-
-            <button onclick="submitCSR()">Submit CSR</button>
-
-            <div id="confirmationLabel" class="confirmation hidden"></div>
-        </div>
-
-        <div class="nav">
-            <a href="status.html">View CSR Status</a>
-        </div>
-    </div>
-
+    <title>Submit CSR</title>
     <script>
-        function submitCSR() {
-            const input = document.getElementById("csrInput").value;
-
-            document.getElementById("confirmationLabel").innerText = "Submitted";
-            document.getElementById("confirmationLabel").classList.remove("hidden");
+        function submitCSR(event) {
+            event.preventDefault();
+            // You can add form data handling logic here
+            document.getElementById("confirmation").innerText = "CSR request successfully submitted.";
         }
     </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Submit CSR</h1>
+        <form onsubmit="submitCSR(event)">
+            <label for="csrName">CSR Name:</label>
+            <input type="text" id="csrName" name="csrName" required>
+            <br><br>
+            <input type="submit" value="Submit CSR">
+        </form>
+        <p id="confirmation"></p>
+    </div>
 </body>
 </html>
